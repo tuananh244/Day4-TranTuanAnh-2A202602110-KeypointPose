@@ -1,5 +1,5 @@
 # Reviewer checklist - điền khi kiểm bài người khác
-
+>>> Làm cá nhân nên không có thông tin so sánh
 Người gán: ______   Người kiểm: ______   Ngày: ______
 
 Chạy trước khi soi bằng mắt:

@@ -36,22 +36,22 @@ một câu văn chung chung.
 - Vì sao: Vì đây là phần có thể dự đoán được nên không cần tiến hành outside
 - Nếu người khác quyết ngược lại thì model học sai cái gì: Modal có thể bị nhầm lẫn hoặc không ảnh hưởng quá lớn vì có nhiều yếu tố quyết định phần tay này (nhiều ảnh có tay)
 
-### Ca 2 - ảnh `______`, người thứ `___`, khớp `______`
+### Ca 2 - ảnh `train_013`, người thứ `3`, khớp `toàn bộ`
 
-- Mơ hồ ở chỗ nào:
-- Bạn quyết thế nào:
-- Vì sao:
-- Nếu người khác quyết ngược lại thì model học sai cái gì:
+- Mơ hồ ở chỗ nào: Ảnh quá mờ, không thể nhìn thấy gì cả.
+- Bạn quyết thế nào: Quyết định để toàn bộ người đó ở dạng `Occluded`.
+- Vì sao: Dù mờ nhưng các bộ phận có thể xác định được (phần thân thì nắm được 90% còn phần mặt khoảng 30%), vì vậy nên thay vì bỏ hoặc gán chắc chắn thì em chọn gán theo dạng mơ hồ, hình không rõ.
+- Nếu người khác quyết ngược lại thì model học sai cái gì: Có thể dẫn tới việc modal không xác định rõ ràng.
 
-### Ca 3 - ảnh `______`, người thứ `___`, khớp `______`
+### Ca 3 - ảnh `train_06`, người thứ `1`, khớp `nose, left_eye, right_ear, right_knee, right_ankle`
 
-- Mơ hồ ở chỗ nào:
-- Bạn quyết thế nào:
-- Vì sao:
-- Nếu người khác quyết ngược lại thì model học sai cái gì:
+- Mơ hồ ở chỗ nào: Các phần bị che, không thể xác định qua ảnh (không rõ ràng)
+- Bạn quyết thế nào: Tiến hành `outside` những phần bị che, và chỉ giữ lại những thông tin lộ ra
+- Vì sao: Bởi vì các thông tin đó không rõ ràng, không thể tiến hành dự đoán nên phải `outside` khỏi ảnh để tránh nhiễu thông tin.
+- Nếu người khác quyết ngược lại thì model học sai cái gì: Nếu người khác giữ lại và dự đoán được chuẩn xác thì khả năng dữ liệu chi tiết hơn để train mô hình.
 
 ## 4. Sau khi so visibility report với bạn cùng nhóm
 
-- Khớp lệch `%v=1` nhiều nhất: `______` (bạn `___%` / họ `___%`)
+- Khớp lệch `%v=1` nhiều nhất: `none` (bạn `100%` / họ `0%`)
 - Nguyên nhân là **guideline chưa rõ** hay **một trong hai bên gán sai**:
 - Luật mới bổ sung vào mục 2 sau khi thống nhất:
